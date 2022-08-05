@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 
 import path from 'path';
@@ -13,7 +13,7 @@ app.set('view engine', 'mustache');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('mustache', mustache());
 
-app.get('/', (req, res) => {
+app.get('/', (req:Request, res:Response) => {
 
     res.render('./pages/home')
 })
