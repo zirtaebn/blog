@@ -1,6 +1,6 @@
 type Post = {
 
-    tittle:string,
+    title:string,
     date:string,
     description:string
 }
@@ -9,9 +9,9 @@ const array:Post[] = [];
 
 export = {
 
-    newPost: ({tittle, date, description}:Post) => {
+    newPost: ({title, date, description}:Post) => {
 
-        array.push({tittle, date, description})
+        array.push({title, date, description});
     },
 
     getPosts: () => array
